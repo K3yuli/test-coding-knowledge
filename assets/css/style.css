@@ -1,16 +1,10 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: "Times New Roman", Times, serif;
 }
 
-body {
-  background: gray;
-}
-
 /* start button starts here */
-.start-btn,
 .quiz-box {
   position: absolute;
   top: 50%;
@@ -22,7 +16,23 @@ body {
   width: 540px;
   background: rgba(255, 255, 255, 0.884);
   border-radius: 5px;
+  padding: 100px 100px;
 }
+
+.quiz-box .quiz-title h1 p {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+    font-size: 20px;
+}
+
+.quiz-title p {
+    text-align: center;
+    font-size: 20px;
+}
+
 .quiz-box h1 {
   height: 60px;
   width: 100%;
@@ -36,11 +46,21 @@ body {
 .start-btn button {
   font-size: 25px;
   font-weight: 500;
-  background-color: orangered;
+  background-color: gray;
   color: white;
   padding: 10px 40px;
   outline: none;
   border: none;
   border-radius: 15px;
   cursor: pointer;
+}
+.start-btn button:hover {
+    background-color:rgb(74, 13, 131);
+}
+ 
+
+
+.start-btn {
+    display: flex;
+    padding: 50px 1px 1px 200px;
 }

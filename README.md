@@ -10,4 +10,3 @@ Some challenges that I faced while doing this project were ...
 
 
 
-- https://img.shields.io/badge/<LABEL>-<MESSAGE>-<COLOR>
