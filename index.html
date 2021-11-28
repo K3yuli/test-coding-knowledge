@@ -106,37 +106,59 @@
             <div class="col">
               <div class="list-group mb-4" id="answers"></div>
             </div>
-            <div class="col">
-              <div id="sound-affects">
-
-              </div>
-            </div>
+            <!-- <div class="col">
+              <div id="sound-affects"></div>
+            </div> -->
           </section>
           <!-- finish -->
           <section id="finished">
-              <div class="alert alert-success mt-0 mb-0">
-                  <h4 class="alert-heading">All Done!</h4>
-                  <hr />
-                  <h5 class="mb-0">Final Score <span id="finalScore">xx</span></h5>
-                  <hr/>
-                  <form class="form-inline">
-                      <input type="text"
-                      id="initials"
-                      placeholder="Enter your Initials"/>
-                      <button type="submit" class="btn btn-info" id="submit">Submit</button>
-                  </form>
-              </div>
+            <div class="alert alert-success mt-0 mb-0">
+              <h4 class="alert-heading">All Done!</h4>
+              <hr />
+              <h5 class="mb-0">Final Score <span id="finalScore">xx</span></h5>
+              <hr />
+              <form class="form-inline">
+                <input
+                  type="text"
+                  id="initials"
+                  placeholder="Enter your Initials"
+                />
+                <button type="submit" class="btn btn-info" id="submit">
+                  Submit
+                </button>
+              </form>
+            </div>
           </section>
           <!-- finished -->
-
         </section>
         <!-- body -->
 
         <!-- footer -->
-        <div class="card-footer text-mutes p-0"></div>
-
+        <div class="card-footer text-mutes p-0">
+          <div class="progress" style="height: 100%">
+            <div
+              class="
+                progress-bar
+                bg-info
+                progress-bar-striped progress-bar-animated
+              "
+              style="width: 0%; height: 100%"
+            ></div>
+          </div>
+          <div class="alert alert-success mt-0 mb-0 pt-0 pb-0" id="assess ft">
+            <strong></strong>
+          </div>
+        </div>
+        <!-- footer -->
       </section>
+      <!-- main -->
     </div>
+    <!-- container -->
+<!-- sound affects -->
+<audio id="audioCorrect">
+    <source src="">
+</audio>
+
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
