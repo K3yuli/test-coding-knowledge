@@ -5,31 +5,138 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
     <title>Test Coding Knowledge</title>
   </head>
+
   <body>
-    <!-- description for quiz goes here -->
-    <div class="quiz-box">
-      <div class="quiz-title">
-        <h1>Test Coding Knowledge</h1>
-        <p>
-          This is a timed quiz. The quiz has 90 second time limit, however. If
-          the question is answered incorrectly 10 seconds will be deducted from
-          your over all time. If the question is answered correctly 10 seconds
-          will be added to the over all time.
-        </p>
-      </div>
-      <!-- start quiz button ges here-->
-      <div class="start-btn">
-        <button>Start Quiz</button>
-      </div>
+    <!--  -->
+    <div class="container">
+      <!--  -->
+      <header class="col text-center p-4">
+        <h2>Test Coding Knowledge Quiz</h2>
+      </header>
+      <!--  -->
+      <section
+        class="modal-fade"
+        id="staticBackdrop"
+        data-backdrop="static"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title" id="staticBackdropLabel">
+                View High Scores
+              </h2>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <ul class="list-group" id="highScoresList"></ul>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                id="clearHighscoresBtn"
+              >
+                Clear High Scores
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- main -->
+      <section class="card">
+        <!-- header -->
+        <section class="card-header pt-0 pb-0">
+          <div class="row row-cols-2">
+            <div class="col">
+              <!-- button trigger -->
+              <a
+                style="text-decoration: none"
+                id="viewHighscores"
+                data-target="#staticBackdrop"
+                href="#"
+                >View High Scores</a
+              >
+            </div>
+            <div class="col text-right">
+              <p class="mb-0" id="itemP">
+                Available Time <strong><span id="timeSpan"></span></strong>
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- body -->
+        <section class="card-body">
+          <!-- intro -->
+          <section class="card bg-dark text-white" id="introduction">
+            <h3 class="card-title">Test Coding Knowledge</h3>
+            <p class="card-text">
+              Try answering the following code-related questions within the time
+              limit. Answer correctly and your time will increase by 5 seconds,
+              answer incorrectly and your time will be deducted by 5 seconds.
+            </p>
+          </section>
+          <a href="#" class="btn btn-primary" id="startBtn">Start</a>
+          <!-- quiz -->
+          <section id="quiz">
+            <h5 id="question">Question 1 xxx xxxx xxx xxx xxx xxx</h5>
+            <div class="col">
+              <div class="list-group mb-4" id="answers"></div>
+            </div>
+            <div class="col">
+              <div id="sound-affects">
+
+              </div>
+            </div>
+          </section>
+          <!-- finish -->
+          <section id="finished">
+              <div class="alert alert-success mt-0 mb-0">
+                  <h4 class="alert-heading">All Done!</h4>
+                  <hr />
+                  <h5 class="mb-0">Final Score <span id="finalScore">xx</span></h5>
+                  <hr/>
+                  <form class="form-inline">
+                      <input type="text"
+                      id="initials"
+                      placeholder="Enter your Initials"/>
+                      <button type="submit" class="btn btn-info" id="submit">Submit</button>
+                  </form>
+              </div>
+          </section>
+          <!-- finished -->
+
+        </section>
+        <!-- body -->
+
+        <!-- footer -->
+        <div class="card-footer text-mutes p-0"></div>
+
+      </section>
     </div>
-    <!-- high score link here -->
-    <div class="hs">View High Scores</div>
-
-    <!-- timer here -->
-    <div class="time">Time</div>
-
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
