@@ -13,101 +13,110 @@
   </head>
 
   <body>
-    <div class="container">
-      <!-- main -->
-      <section class="card">
-        <!-- header -->
-        <section class="card-header pt-0 pb-0">
-          <div class="row row-cols-2">
-            <!-- hishscore section -->
-            <div class="col" id="highscore">
-              <a
-                href="./hs.html"
-                id="viewHighscores"
-                data-target="#staticBackdrop"
-                >View High Scores</a
-              >
-            </div>
+    <div>
+      <div class="container">
+        <!-- main -->
+        <section class="card">
+          <!-- header -->
+          <section class="card-header pt-0 pb-0">
+            <div class="row row-cols-2">
+              <!-- hishscore section -->
+              <div class="col" id="highscore">
+                <a
+                  href="./hs.html"
+                  id="viewHighscores"
+                  data-target="#staticBackdrop"
+                  >View High Scores</a
+                >
+              </div>
 
-            <!-- timer section  -->
-            <div class="col text-right" id="timer">
-              <p class="mb-0">Time</p>
+              <!-- timer section  -->
+              <div class="col text-right" id="timer">
+                <p class="mb-0">Time</p>
+              </div>
             </div>
-          </div>
-        </section>
-        <!--  header ends (hs and time) -->
-
-        <!-- body -->
-        <section class="card-body">
-          <!-- intro -->
-          <section class="card text-black" id="introduction">
-            <h3 class="card-title">Test Coding Knowledge</h3>
-            <p class="card-text">
-              Try answering the following code-related questions within the time
-              limit. Answer correctly and your time will increase by 5 seconds,
-              answer incorrectly and your time will be deducted by 5 seconds.
-            </p>
           </section>
-          <a href="#" class="btn btn-primary" id="startBtn">Start</a>
-          <!-- quiz -->
-          <section id="quiz">
-            <h5 id="question"></h5>
-            <div class="col">
-              <div class="list-group mb-4" id="answers"></div>
-            </div>
-            <!-- <div class="col">
+          <!--  header ends (hs and time) -->
+
+          <!-- body -->
+          <section class="card-body">
+            <!-- intro -->
+            <section class="card text-black" id="introduction">
+              <h3 class="card-title">Test Coding Knowledge</h3>
+              <p class="card-text">
+                Try answering the following code-related questions within the
+                time limit. Answer correctly and your time will increase by 5
+                seconds, answer incorrectly and your time will be deducted by 5
+                seconds.
+              </p>
+            </section>
+            <a href="#" class="btn btn-primary" id="startBtn">Start</a>
+            <!-- quiz -->
+            <section id="quiz">
+              <h5 id="question"></h5>
+              <div class="col">
+                <div class="list-group mb-4" id="answers"></div>
+              </div>
+              <!-- <div class="col">
               <div id="sound-affects"></div>
             </div> -->
+            </section>
+            <!-- finish -->
+            <section id="finished">
+              <div class="alert alert-success mt-0 mb-0">
+                <h4 class="alert-heading">All Done!</h4>
+                <hr />
+                <h5 class="mb-0">
+                  Final Score <span id="finalScore">xx</span>
+                </h5>
+                <hr />
+                <form class="form-inline">
+                  <input
+                    type="text"
+                    id="initials"
+                    placeholder="Enter your Initials"
+                  />
+                  <button type="submit" class="btn btn-info" id="submit">
+                    Submit
+                  </button>
+                </form>
+              </div>
+            </section>
+            <!-- finished -->
           </section>
-          <!-- finish -->
-          <section id="finished">
-            <div class="alert alert-success mt-0 mb-0">
-              <h4 class="alert-heading">All Done!</h4>
-              <hr />
-              <h5 class="mb-0">Final Score <span id="finalScore">xx</span></h5>
-              <hr />
-              <form class="form-inline">
-                <input
-                  type="text"
-                  id="initials"
-                  placeholder="Enter your Initials"
-                />
-                <button type="submit" class="btn btn-info" id="submit">
-                  Submit
-                </button>
-              </form>
-            </div>
-          </section>
-          <!-- finished -->
+          <!-- body -->
         </section>
-        <!-- body -->
-      </section>
-      <!-- main -->
+        <!-- main -->
+      </div>
+      <!-- container -->
+      <!-- highscores -->
+      <div id="highScore" class="pl-5 ml-4 pt-5 justify-content-center font-weight-bold" style="display: none;">
+        <h2 class="font-weight-bold pt-2 pb-3 mb-2">High Scores</h2>
+        <div id="listOfHighScores" class="list-group list-group-flush pt-2 pb-3 mb-2"></div>
+        <p>
+          <button type="submit" class="btn btn-info mt-3 mr-3" id="goBackBtn">Go Back</button>
+          <button type="submit" class="btn btn-info mt-3" id="clearHighScoreBtn">Clear High Scores</button>
+        </p>
+      </div>
+      <div class="col-md-2"></div>
+      <!-- sound affects -->
+      <audio id="audioCorrect">
+        <source
+          src="./assets/sound-affects/ding-sound-effect_2.mp3"
+          type="audio/mpeg"
+        />
+      </audio>
+      <audio id="audioIncorrect">
+        <source
+          src="./assets/sound-affects/mixkit-game-show-wrong-answer-buzz-950.wav"
+          type="audio/mpeg"
+        />
+      </audio>
     </div>
-    <!-- container -->
-    <!-- sound affects -->
-    <audio id="audioCorrect">
-      <source
-        src="./assets/sound-affects/ding-sound-effect_2.mp3"
-        type="audio/mpeg"
-      />
-    </audio>
-    <audio id="audioIncorrect">
-      <source
-        src="./assets/sound-affects/mixkit-game-show-wrong-answer-buzz-950.wav"
-        type="audio/mpeg"
-      />
-    </audio>
-
     <!-- popper and jQuery -->
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
       crossorigin="anonymous"
     ></script>
     <!-- bootstrap -->
