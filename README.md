@@ -25,6 +25,7 @@ THEN I can save my initials and score
 
 
 
-
-
+### URL
+Repo URL: https://github.com/K3yuli/test-coding-knowledge
+Deployed URL:https://k3yuli.github.io/test-coding-knowledge/
 

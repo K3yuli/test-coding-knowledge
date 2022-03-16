@@ -45,13 +45,20 @@ const  quizQuestions = [
 // 
 
 // click start and begin questions
-var start = document.getElementById("startBtn")
+var start = document.getElementById("startBtn");
+
+
 
 // answering question incorrectly time is deducted from time
-
+var time = document.getElementById("timer");
 
 // when questions are done the quiz is over and or when the timer reaches 0
 
 
+
+
 // when quiz over then user enters initials
+var initials = document.getElementById("initials");
 var highScore = document.getElementById("highscore");
+var goBack = document.getElementById("goBackBtn");
+var clearHighScores = document.getElementById("clearHighScoreBtn");
