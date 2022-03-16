@@ -13,85 +13,34 @@
   </head>
 
   <body>
-    <!--  -->
     <div class="container">
-      <!--  -->
-      <header class="col text-center p-4">
-        <h2>Test Coding Knowledge Quiz</h2>
-      </header>
-      <!--  -->
-      <section
-        class="modal-fade"
-        id="staticBackdrop"
-        data-backdrop="static"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="staticBackdropLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h2 class="modal-title" id="staticBackdropLabel">
-                View High Scores
-              </h2>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <ul class="list-group" id="highScoresList"></ul>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
-              <button
-                type="button"
-                class="btn btn-primary"
-                id="clearHighscoresBtn"
-              >
-                Clear High Scores
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
       <!-- main -->
       <section class="card">
         <!-- header -->
         <section class="card-header pt-0 pb-0">
           <div class="row row-cols-2">
-            <div class="col">
-              <!-- button trigger -->
+            <!-- hishscore section -->
+            <div class="col" id="highscore">
               <a
-                style="text-decoration: none"
+                href="./hs.html"
                 id="viewHighscores"
                 data-target="#staticBackdrop"
-                href="#"
                 >View High Scores</a
               >
             </div>
-            <div class="col text-right">
-              <p class="mb-0" id="itemP">
-                Available Time <strong><span id="timeSpan"></span></strong>
-              </p>
+
+            <!-- timer section  -->
+            <div class="col text-right" id="timer">
+              <p class="mb-0">Time</p>
             </div>
           </div>
         </section>
+        <!--  header ends (hs and time) -->
+
         <!-- body -->
         <section class="card-body">
           <!-- intro -->
-          <section class="card bg-dark text-white" id="introduction">
+          <section class="card text-black" id="introduction">
             <h3 class="card-title">Test Coding Knowledge</h3>
             <p class="card-text">
               Try answering the following code-related questions within the time
@@ -102,7 +51,7 @@
           <a href="#" class="btn btn-primary" id="startBtn">Start</a>
           <!-- quiz -->
           <section id="quiz">
-            <h5 id="question">Question 1 xxx xxxx xxx xxx xxx xxx</h5>
+            <h5 id="question"></h5>
             <div class="col">
               <div class="list-group mb-4" id="answers"></div>
             </div>
@@ -132,24 +81,6 @@
           <!-- finished -->
         </section>
         <!-- body -->
-
-        <!-- footer -->
-        <div class="card-footer text-mutes p-0">
-          <div class="progress" style="height: 100%">
-            <div
-              class="
-                progress-bar
-                bg-info
-                progress-bar-striped progress-bar-animated
-              "
-              style="width: 0%; height: 100%"
-            ></div>
-          </div>
-          <div class="alert alert-success mt-0 mb-0 pt-0 pb-0" id="assess ft">
-            <strong></strong>
-          </div>
-        </div>
-        <!-- footer -->
       </section>
       <!-- main -->
     </div>
