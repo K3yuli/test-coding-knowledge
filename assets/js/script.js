@@ -1,28 +1,43 @@
 
-else{
-    window.clearInterval(update);
-    c = "."
-    message001.innerHTML = "All Done!";
-    message002.innerHTML = "";
-    message003.innerHTML = "";
-    message004.innerHTML = "<button class=buttons002 onclick repeat002"
+let  quizQuestions = [
+    {
+        question: "What is the proper use for camel casing?",
+        options: ["PropertyText", "centerAlignText", "documentorientedLinks", "peoplelineHandler"],
+        correct: 1,
+        sound: ""
+    },
 
-}
+    {
+        question: "What type of data does an array store?",
+        options: ["Strings", "Boolean values", "Objects", "All the above"],
+        correct: 3,
+        sound: ""
+    },
 
-function begin(){
-    c = 90;
-}
+    {
+        question: "What does 'JSON' stand for?",
+        options: ["Java System Online Network", "JavaScript Object Network", "Joint System Object Notation", "JavaScript Object Notation"],
+        correct: 3,
+        sound: ""
+    },
 
-function timer(){
-    c = c - 1;
-    if(c < 90) {
-        time.innerHTML = c;
+    {
+        question: "True or False: The DOM is the same as the HTML",
+        options: ["True", "False"],
+        correct: 1,
+        sound: ""
+    },
+    {
+        question: "How to write a comment in JavaScript?",
+        options: ["<!-- comment -->", "// comment //", "/* comment */", "// comment // & /* comment */"],
+        correct: 3,
+        sound: ""
+    },
+
+    {
+        question: "How to write HTML code dynamically using JavaScript",
+        options: ["'.innerHTML='<h1></h1>'", ".HTML='<h1></h1>'", ".htmlInner='<h1></h1>'", ".'<h1></h1>'"],
+        correct: 0,
+        sound: ""
     }
-    if (c < 1) {
-        window.clearInterval(update);
-        message001.innerHTML = "All Done!";
-        message002.innerHTML = "";
-        message003.innerHTML = "";
-        message004.innerHTML = "<button class=buttons002 onclick repeat002"
-    }
-}
+];
