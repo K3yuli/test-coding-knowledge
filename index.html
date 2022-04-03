@@ -5,131 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
-    />
+
     <title>Test Coding Knowledge</title>
   </head>
 
   <body>
-    <div>
-      <div class="container">
-        <!-- main -->
-        <section class="card">
-          <!-- header -->
-          <section class="card-header pt-0 pb-0">
-            <div class="row row-cols-2">
-              <!-- hishscore section -->
-              <div class="col" id="highscore">
-                <a
-                  href="./hs.html"
-                  id="viewHighscores"
-                  data-target="#staticBackdrop"
-                  >View High Scores</a
-                >
-              </div>
-
-              <!-- timer section  -->
-              <div class="col text-right" id="timer">
-                <p class="mb-0">Time</p>
-              </div>
-            </div>
-          </section>
-          <!--  header ends (hs and time) -->
-
-          <!-- body -->
-          <section class="card-body">
-            <!-- intro -->
-            <section class="card text-black" id="introduction">
-              <h3 class="card-title">Test Coding Knowledge</h3>
-              <p class="card-text">
-                Try answering the following code-related questions within the
-                time limit. Answer correctly and your time will increase by 5
-                seconds, answer incorrectly and your time will be deducted by 5
-                seconds.
-              </p>
-            </section>
-            <a href="#" class="btn btn-primary" id="startBtn">Start</a>
-            <!-- quiz -->
-            <section id="quiz">
-              <h5 id="question"></h5>
-              <div class="col">
-                <div class="list-group mb-4" id="answers"></div>
-              </div>
-              <!-- <div class="col">
-              <div id="sound-affects"></div>
-            </div> -->
-            </section>
-            
-            <!-- finish -->
-            <section id="finished">
-              <div class="alert alert-success mt-0 mb-0">
-                <h4 class="alert-heading">All Done!</h4>
-                <hr />
-                <h5 class="mb-0">
-                  Final Score <span id="finalScore"></span>
-                </h5>
-                <hr />
-                <form class="form-inline">
-                  <input
-                    type="text"
-                    id="initials"
-                    placeholder="Enter your Initials"
-                  />
-                  <button type="submit" class="btn btn-info" id="submit">
-                    Submit
-                  </button>
-                </form>
-              </div>
-            </section>
-            <!-- finished -->
-
-          </section>
-
-          <!-- body -->
-        </section>
-
-        <!-- main -->
+    <section id="all">
+      <div id="nav">
+        <div class="left">
+          <a onclick="getScore()" href="#"> <h5>Highscores</h5></a>
+        </div>
+        <div class="right">
+          <h5>Time: <span id="timeLeft">0</span></h5>
+        </div>
       </div>
-      <!-- container -->
-      <!-- highscores -->
-      <div id="highScore" class="pl-5 ml-4 pt-5 justify-content-center font-weight-bold" style="display: none;">
-        <h2 class="font-weight-bold pt-2 pb-3 mb-2">High Scores</h2>
-        <div id="listOfHighScores" class="list-group list-group-flush pt-2 pb-3 mb-2"></div>
-        <p>
-          <button type="submit" class="btn btn-info mt-3 mr-3" id="goBackBtn">Go Back</button>
-          <button type="submit" class="btn btn-info mt-3" id="clearHighScoreBtn">Clear High Scores</button>
-        </p>
+      <div id="quiz">
+        <div id="quizBody">
+          <h1>Test Coding Knowledge!</h1>
+          <h3>Click to Play</h3>
+          <button onclick="start()">Start</button>
+        </div>
       </div>
-      <div class="col-md-2"></div>
-      <!-- sound affects -->
-      <audio id="audioCorrect">
-        <source
-          src="./assets/sound-affects/ding-sound-effect_2.mp3"
-          type="audio/mpeg"
-        />
-      </audio>
-      <audio id="audioIncorrect">
-        <source
-          src="./assets/sound-affects/mixkit-game-show-wrong-answer-buzz-950.wav"
-          type="audio/mpeg"
-        />
-      </audio>
-    </div>
-    <!-- popper and jQuery -->
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-      crossorigin="anonymous"
-    ></script>
-    <!-- bootstrap -->
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-      crossorigin="anonymous"
-    ></script>
-
+    </section>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
